@@ -1,0 +1,14 @@
+// Copper is chasing the cat in the same direction, let it be x direction
+// First unknown variable which is minimum speed of the cat, let it be 'v'. Min value of 'v' must be 0 as the cat should run in same direction as Cooper. Max value of 'v' must be 5 as it is an appropriately fast speed
+Cat_Velocity_X_Direction{0:v:5}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The dog, Cooper, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(dog, Cooper, {0 0 0}, {0 0 0}, 15)
+// Cooper's velocity is 2 m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Cooper, {2 0 0}, 0, null)
+// The cat, Tom, is at the 13 meters ahead in x direction so it is at (0+13, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
+CreateDynamicObject(cat, Tom, {0+13 0 0}, {0 0 0}, 5)
+// Tom's velocity is v m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Cat, {v 0 0}, 0, null)

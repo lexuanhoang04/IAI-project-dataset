@@ -1,0 +1,1 @@
+A cheetah can achieve a peak velocity of 100 km per hour up to distances less than 500 meters. If the cheetah spots his prey at a distance of 100 meters. What is the minimum time it will take to get its prey if the average velocity attained by it is 90 km/h?

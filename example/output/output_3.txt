@@ -1,0 +1,14 @@
+// The cheetah and the prey are running in the same direction, let it be x direction
+// First unknown variable which is minimum time for the cheetah to get its prey, let it be 't'. Min value of 't' must be 0 as the cheetah should run in same direction as the prey. Max value of 't' must be 100 as it is an appropriately fast time
+Cheetah_Time_To_Get_Prey{0:t:100}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The cheetah, Alice, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(cheetah, Alice, {0 0 0}, {0 0 0}, 15)
+// Alice's velocity is 27.78 m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Alice, {27.78 0 0}, 0, null)
+// The prey, Tom, is at the 100 meters ahead in x direction so it is at (0+100, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
+CreateDynamicObject(prey, Tom, {0+100 0 0}, {0 0 0}, 5)
+// Tom's velocity is 25 m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Prey, {25 0 0}, 0, null)

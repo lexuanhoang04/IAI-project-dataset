@@ -1,0 +1,18 @@
+// The leopard and the deer are running in the same direction, let it be x direction
+// First unknown variable which is minimum speed of the deer, let it be 'v'. Min value of 'v' must be 0 as the deer should run in same direction as the leopard. Max value of 'v' must be 5 as it is an appropriately fast speed
+Deer_Velocity_X_Direction{0:v:5}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The leopard, Alice, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(leopard, Alice, {0 0 0}, {0 0 0}, 15)
+// Alice's initial velocity is 30 m/s in x direction, start at t = 0
+SetDynamicObjectInstantVelocity(Alice, {30 0 0}, 0)
+// Alice's acceleration is -5m/s^2 in x direction, starts at t = 0
+SetDynamicObjectAcceleration(Alice, {-5 0 0}, 0, null) 
+
+// The deer, Tom, is at the 48 meters ahead in x direction so it is at (0+48, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
+CreateDynamicObject(deer, Tom, {0+48 0 0}, {0 0 0}, 5)
+// Tom's velocity is v m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Deer, {v 0 0}, 0, null)
+

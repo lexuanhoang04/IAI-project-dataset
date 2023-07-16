@@ -1,0 +1,17 @@
+// The cheetah and the gazelle are running in the same direction, let it be x direction
+// First unknown variable which is time taken by the cheetah to catch the gazelle, let it be 't'. Min value of 't' must be 0 as the cheetah should run in same direction as the gazelle. Max value of 't' must be 100 as it is an appropriately fast time
+Cheetah_Time_To_Catch_Gazelle{0:t:100}
+//Second unknown variable which is displacement of gazelle and cheetah, let it be 'd'. Min value of 'd' must be 0 as distance can not smaller than 0. Max value of 'd' must be 200 as it is an appropriately large distance
+Displacement_Cheetah_Gazelle{0:d:100}
+
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The cheetah, Alice, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(cheetah, Alice, {0 0 0}, {0 0 0}, 15)
+// Alice's acceleration is 4 m/s^2 in x direction, start at t = 0
+SetDynamicObjectAcceleration(Alice, {4 0 0}, 0, null)
+// The gazelle, Tom, is at the 0 meters ahead in x direction so it is at (0+0, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
+CreateDynamicObject(gazelle, Tom, {0+0 0 0}, {0 0 0}, 5)
+// Tom's velocity is 10 m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Gazelle, {10 0 0}, 0, null)

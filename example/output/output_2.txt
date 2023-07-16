@@ -1,0 +1,14 @@
+// The girl and the cat are running in the same direction, let it be x direction
+// First unknown variable which is minimum acceleration of the cat, let it be 'a'. Min value of 'a' must be 0 as the cat should run in same direction as the girl. Max value of 'a' must be 2 as it is an appropriately fast acceleration
+Cat_Acceleration_X_Direction{0:a:2}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The girl, Alice, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(girl, Alice, {0 0 0}, {0 0 0}, 15)
+// Alice's velocity is 2 m/s in x direction, start at t = 0
+SetDynamicObjectVelocity(Alice, {2 0 0}, 0, null)
+// The cat, Tom, is at the 6 meters ahead in x direction so it is at (0+6, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
+CreateDynamicObject(cat, Tom, {0+6 0 0}, {0 0 0}, 5)
+// Tom's acceleration is a m/s in x direction, start at t = 0
+SetDynamicObjectAcceleration(Cat, {a 0 0}, 0, null)
