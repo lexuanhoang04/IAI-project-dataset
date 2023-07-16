@@ -1,0 +1,24 @@
+//Let the moving direction of the antelope is x direction. 
+//First unknown variable is antelope's speed at first point, call this v_s_0. The minimum value of v_s_0 is 0 as speed always larger than 0. The maximum value of v_s_0 is 100 as it is a relatively large value for normal objects.
+Antelope_initial_speed_x_direction{0:v_s_0:100}
+
+//First unknown variable is antelope acceleration call this a. The minimum value of a is -50 as this is relatively small for normal objects. The maximum value of a is 50 as it is a relatively large value for normal objects.
+Antelope_acceleration_x_direction{-50:a:50}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+
+// The antelope, Alice, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(antelope, Alice, {0 0 0}, {0 0 0}, 15)
+
+//Alice's position is 70 in x direction at the time 6
+SetDynamicObjectInstantPosition(Bob, 70, 6)
+
+//Alice's velocity at time 0 is v_s_0
+SetDynamicObjectInstantVelocity (Alice, v_s_0, 0)
+
+//Alice's velocity at time 6 is 15
+SetDynamicObjectInstantVelocity (Alice, v_s_0, 0)
+
+//Alice acceleration is a in x direction, start at time 0.
+SetDynamicObjectAcceleration (Alice, {a 0 0}, 0, null)

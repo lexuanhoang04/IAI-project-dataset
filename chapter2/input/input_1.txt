@@ -1,0 +1,2 @@
+Starting from the front door of a ranch house, you walk 60.0 m
+due east to a windmill, turn around, and then slowly walk 40.0 m west to a bench, where you sit and watch the sunrise. It takes you 28.0 s to walk from the house to the windmill and then 36.0 s to walk from the windmill to the bench. For the entire trip from the front door to the bench, what are your (a) average velocity and (b) average speed?

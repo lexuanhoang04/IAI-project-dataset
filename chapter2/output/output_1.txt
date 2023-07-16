@@ -1,0 +1,17 @@
+//Let the direction to the east to be positive x-direction, so the direction to the west is negative x-direction. 
+//First unknown variable is the average velocity in the entire trip, let it be 'v'. Min value of 'v' must be -100 as it is a relatively small value and max value must be 100 as it is a relatively large value for velocity of normal objects.
+Human_Average_Velocity_X_Direction{-100:v:100}
+
+//Second unknown variable is the average velocity in the entire trip, let it be 'v_s'. Min value of 'v_s' must be 0 as speed always larger than 0 and max value must be 100 as it is a relatively large value for speed of normal objects.
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+// The human, Bob, is at the origin, with rotation in positive x-axis (0, 0, 0) estimate mass 15 kg
+CreateDynamicObject(human, Bob, {0 0 0}, {0 0 0}, 15)
+
+//Bob's position is 60 in x direction at the time 36
+SetDynamicObjectInstantPosition(Bob, 60, 36)
+
+//Bob's position is 40 in x direction at the time 36 + 28
+SetDynamicObjectInstantPosition(Bob, 40, 36+28)
+
