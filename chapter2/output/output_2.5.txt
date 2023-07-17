@@ -11,7 +11,7 @@ SetEnvironment(true, 0.5, 0, -9.8)
 CreateDynamicObject(human, Bob, {0 0 0}, {1 0 0}, 15)
 
 //Bob's position is 60 in x direction at the time 36
-MoveDynamicObjectConstantVelocity(Bob, {60 0 0}, 0, 36)
+MoveDynamicObjectOverDistance(Bob, {60 0 0}, 0, 36)
 
 //Bob's position is 60-40 in x direction at the time 36 + 28
-SetDynamicObjectVelocity(Bob, {60-40 0 0}, 36, 36+28)
+MoveDynamicObjectOverDistance(Bob, {60-40 0 0}, 36, 36+28)

@@ -12,7 +12,7 @@ SetEnvironment(true, 0.5, 0, -9.8)
 CreateDynamicObject(antelope, Alice, {0 0 0}, {1 0 0}, 15)
 
 //Alice's position is 70 in x direction at the time 6
-MoveDynamicObjectConstantVelocity(Alice, {70 0 0}, 0, 6)
+MoveDynamicObjectOverDistance(Alice, {70 0 0}, 0, 6)
 
 //Alice's velocity at time 0 is v_s_0
 SetDynamicObjectInstantVelocity (Alice, v_s_0, 0)
