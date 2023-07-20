@@ -1,0 +1,4 @@
+You throw a glob of putty straight up toward the ceiling, which is 3.60 m above the point where the putty leaves your hand. The initial speed of the putty as it leaves your hand is 9.50 m/s.
+(a) What is the speed of the putty just before it strikes the ceiling?
+(b) How much time from when it leaves your hand does it take the
+putty to reach the ceiling?

@@ -1,0 +1,21 @@
+// The ball is moving in the y direction
+// First unknown variable is the height of the ball above its original point, let it be 'h'. The minimum value of h is 0 as the ball can not go below its original point. The maximum value of h is 100 as it is a relatively large value for normal exercise.
+Ball_Height_Above_Original_Point{0:h:100}
+
+// Second unknown variable is the speed of the ball just after it was hit, let it be 'v'. The minimum value of v is 0 as speed always larger than 0. The maximum value of v is 100 as it is a relatively large value for normal objects.
+Ball_Speed_Just_After_Hit{0:v:100}
+
+// There should be ground and friction with Mars' gravity
+SetEnvironment(true, 0.5, 0, -9.8*0.379)
+
+// The ball, Peter, is at the origin, with rotation in positive z-axis (0, 0, 1) estimate mass 5 kg
+CreateDynamicObject(ball, Peter, {0 0 0}, {0 0 1}, 5)
+
+// Peter's initial velocity is v m/s in z direction, start at t = 0
+SetDynamicObjectInstantVelocity(Peter, {0 0 v}, 0)
+
+// Peter moves from origin to h from time 0 to time 8.5/2
+MoveDynamicObjOverDistance(Peter, {0 0 h}, 0, 8.5/2)
+
+// Peter moves from h to origin from time 8.5/2 to time 8.5
+MoveDynamicObjOverDistance(Peter, {0 0 -h}, 8.5/2, 8.5)

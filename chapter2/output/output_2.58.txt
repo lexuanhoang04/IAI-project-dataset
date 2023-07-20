@@ -1,0 +1,27 @@
+// The block is moving in the x direction
+// First unknown variable is the time when the block is again at x = 0, let it be 't'. Min value of 't' must be 0 as time always larger than 0. Max value of 't' must be 100 as it is a relatively large value for regular exercises.
+Block_Time_At_X_0{0:t:100}
+
+// Second unknown variable is the maximum distance east of x = 0 that the block reaches, let it be 'd'. Min value of 'd' must be 0 as the block can not go below its original point. The maximum value of 'd' must be 100 as it is a relatively large value for normal exercise.
+Block_Maximum_Distance_East_Of_X_0{0:d:100}
+
+//Third unknown variable is the time it take for the rock the reach the maximum distance east, let it be 't1'. Min value of 't' must be 0 as time always larger than 0. Max value of 't1' must be 100 as it is a relatively large value for regular exercises.
+Block_Time_At_X_max{0:t1:100}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+
+// The block, Peter, is at the origin, with rotation in positive x-axis (1, 0, 0) estimate mass 5 kg
+CreateDynamicObject(block, Peter, {0 0 0}, {1 0 0}, 5)
+
+// Peter's initial velocity is 12 m/s in x direction, start at t = 0
+SetDynamicObjectInstantVelocity(Peter, {12 0 0}, 0)
+
+// Peter's acceleration is -2 m/s^2 in x direction, start at t = 0
+SetDynamicObjectAcceleration(Peter, {-2 0 0}, 0, null)
+
+//Peter travels distance h in positive x-direction after time t1
+MoveDynamicObjOverDistance(Peter, {h 0 0}, 0, t1)
+
+// Peter travels distance h in negavtive x-direction from time t1 to time t
+MoveDynamicObjOverDistance(Peter, {-h 0 0}, t, t1)

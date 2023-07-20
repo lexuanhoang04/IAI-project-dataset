@@ -1,0 +1,18 @@
+//The putty is moving in z direction
+//The first unknown variable is the speed of the putty justs before it strikes the ceiling, let it be v. The minimum value of v is 0 as speed always larger than 0, the maximum value of v is 100 as is a relatively large value for normal object.
+Putty_speed_before_hitting_ceiling{0:v:100}
+
+// Second unknown variable is the time taken by the putty to reach the ceiling, let it be 't'. Min value of 't' must be 0 as time always larger than 0. Max value of 't' must be 100 as it is a relatively large value for regular exercises.
+Putty_time_to_reach_ceiling{0:t:100}
+
+// The putty, Peter, is at the origin, with rotation in positive z-axis (0, 0, 1) estimate mass 5 kg.
+CreateDynamicObject(block, Peter, {0 0 0}, {0 0 1}, 5)
+
+// Peter's initial velocity is 3.6 m/s in z direction, start at t = 0
+SetDynamicObjectInstantVelocity(Peter, {0 0 3.6}, 0)
+
+//Peter's final velocity is v in z direction, at time t.
+SetDynamicObjectInstantVelocity(Peter, {0 0 v}, t)
+
+//Peter's position is 3.6 after time t
+MoveDynamicObjOverDistance(Peter, {3.6 0 0}, 0, t)

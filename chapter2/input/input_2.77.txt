@@ -1,0 +1,3 @@
+Two stones are thrown vertically upward from the ground, one with three times the initial speed of the other. 
+(a) If the faster stone takes 10 s to return to the ground, how long will it take the slower stone to return?
+(b) If the slower stone reaches a maximum height of 30m, how high  will the faster stone go? Assume free fall.

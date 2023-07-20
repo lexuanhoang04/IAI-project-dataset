@@ -1,0 +1,27 @@
+// The stones are moving in the y direction
+// First unknown variable is the time it takes the slower stone to return, let it be 't'. Min value of 't' must be 0 as time always larger than 0. Max value of 't' must be 100 as it is a relatively large value for regular exercises.
+Slower_Stone_Time_To_Return{0:t:100}
+
+// Second unknown variable is the height the faster stone will go, let it be 'h'. Min value of 'h' must be 0 as the stone can not go below its original point. The maximum value of 'h' must be 100 as it is a relatively large value for normal exercise.
+Faster_Stone_Height{0:h:100}
+
+// There should be ground and friction with Earth's gravity
+SetEnvironment(true, 0.5, 0, -9.8)
+
+// The slower stone, Peter, is at the origin, with rotation in positive z-axis (0, 0, 1) estimate mass 5 kg
+CreateDynamicObject(stone, Peter, {0 0 0}, {0 0 1}, 5)
+
+// Peter's initial velocity is v_i m/s in z direction, start at t = 0
+SetDynamicObjectInstantVelocity(Peter, {0 0 v_i}, 0)
+
+// Peter's position is 30 after time t/2
+MoveDynamicObjOverDistance(Peter, {0 0 30}, 0, t/2)
+
+// The faster stone, Tom, is at the origin, with rotation in positive z-axis (0, 0, 1) estimate mass 5 kg
+CreateDynamicObject(stone, Tom, {0 0 0}, {0 0 1}, 5)
+
+// Tom's initial velocity is 3*v_i  m/s in z direction, start at t = 0
+SetDynamicObjectInstantVelocity(Tom, {0 0 3*v_i}, 0)
+
+// Tom's position is h after time 5
+MoveDynamicObjOverDistance(Tom, {0 0 h}, 0, 5)

@@ -1,0 +1,3 @@
+A car sits on an entrance ramp to a freeway, waiting for a break in the traffic. Then the driver accelerates with constant acceleration along the ramp and onto the freeway. The car starts from rest, moves in a straight line, and has a speed of 20 m/s when it reaches the end of the 120-m-long ramp.
+(a) What is the acceleration of the car?
+(b) How much time does it take the car to travel the length of the ramp?
