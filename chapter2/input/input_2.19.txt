@@ -1,1 +1,3 @@
-An antelope moving with constant acceleration covers the distance between two points 70.0 m apart in 6.00 s. Its speed as it passes the second point is 15.0 m/s. What are (a) its speed at the first point and (b) its acceleration?
+An antelope moving with constant acceleration covers the distance between two points 70.0 m apart in 6.00 s. Its speed as it passes the second point is 15.0 m/s. What are 
+(a) its speed at the first point and 
+(b) its acceleration?

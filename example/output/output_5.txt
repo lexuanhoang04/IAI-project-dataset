@@ -9,7 +9,7 @@ CreateDynamicObject(leopard, Alice, {0 0 0}, {0 0 0}, 15)
 // Alice's initial velocity is 30 m/s in x direction, start at t = 0
 SetDynamicObjectInstantVelocity(Alice, {30 0 0}, 0)
 // Alice's acceleration is -5m/s^2 in x direction, starts at t = 0
-SetDynamicObjectAcceleration(Alice, {-5 0 0}, 0, null) 
+SetDynamicObjectAcceleration(Alice, {-5 0 0}, 0, null)  
 
 // The deer, Tom, is at the 48 meters ahead in x direction so it is at (0+48, 0, 0), with rotation in positive x-axis (0, 0, 0) estimate mass 5 kg
 CreateDynamicObject(deer, Tom, {0+48 0 0}, {0 0 0}, 5)

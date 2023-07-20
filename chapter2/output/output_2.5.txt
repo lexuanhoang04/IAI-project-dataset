@@ -1,4 +1,4 @@
-//Let the direction to the east to be positive x-direction, so the direction to the west is negative x-direction. 
+//Let the direction to the east to be positive x-direction, so the direction to the west is negative x-direction.
 //First unknown variable is the average velocity in the entire trip, let it be 'v'. Min value of 'v' must be -100 as it is a relatively small value and max value must be 100 as it is a relatively large value for velocity of normal objects.
 Human_Average_Velocity_X_Direction{-100:v:100}
 

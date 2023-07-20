@@ -1,4 +1,4 @@
-//Let the moving direction of the antelope is x direction. 
+//Let the moving direction of the antelope is x direction.
 //First unknown variable is antelope's speed at first point, call this v_s_0. The minimum value of v_s_0 is 0 as speed always larger than 0. The maximum value of v_s_0 is 100 as it is a relatively large value for normal objects.
 Antelope_initial_speed_x_direction{0:v_s_0:100}
 
