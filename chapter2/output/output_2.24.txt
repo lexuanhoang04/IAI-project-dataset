@@ -1,24 +1,18 @@
 // The car is moving in the x direction (the direction of the ramp)
 // First unknown variable is the acceleration of the car, let it be 'a'. Min value of 'a' must be 0 as acceleration always larger than 0. Max value of 'a' must be 100 as it is a relatively large value for normal objects.
 Car_Acceleration_X_Direction{0:a:100}
-
 // Second unknown variable is the time taken by the car to travel the length of the ramp, let it be 't'. Min value of 't' must be 0 as time always larger than 0. Max value of 't' must be 100 as it is a relatively large value for regular exercises.
 Car_Time_To_Travel_Ramp{0:t:100}
 
 // There should be ground and friction with Earth's gravity
 SetEnvironment(true, 0.5, 0, -9.8)
-
 // The car, Alice, is at the origin, with rotation in positive x-axis (1, 0, 0) estimate mass 15 kg
 CreateDynamicObject(car, Alice, {0 0 0}, {1 0 0}, 15)
-
 // Alice's initial velocity is 0 m/s in x direction, start at t = 0
 SetDynamicObjectInstantVelocity(Alice, {0 0 0}, 0)
-
 // Alice's final velocity is 20 m/s in x direction, at t
 SetDynamicObjectInstantVelocity(Alice, {20 0 0}, t)
-
 // Alice's acceleration is a in x direction, start at t = 0, end at t.
 SetDynamicObjectAcceleration (Alice, {a 0 0}, 0, t)
-
 //Alice's position is 120 after time t
 MoveDynamicObjOverDistance(Alice, {120 0 0}, 0, t)
